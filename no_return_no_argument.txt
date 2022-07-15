@@ -1,0 +1,318 @@
+Q1.Wap input a no and check it is palindrome or not.
+============================================================
+
+package oops;
+public class palindrom_no 
+{
+	int rm=0;
+	int rev=0;
+
+	int n=121;
+	public void disp()
+	{
+		int i;
+		for(i=n ; i!=0 ; i++)
+		{
+		  rm=i%10;
+		  rev=rev*10+rm;
+		  i=i/10;
+		}
+		if(n==rev)
+			System.out.println("this is palindrom no");
+		else
+			System.out.println("this is not plindrom no");
+	 }
+	   public static void main(String args[])
+	   {
+		   palindrom_no pn=new palindrom_no();
+		    pn.disp();
+		 }
+
+}
+
+================================================================================
+=================================================================================
+
+2.Wap input a no and find the factorial.
+==============================================================================
+package oops;
+
+public class factorial 
+{
+	int i=1;
+	int n=5;
+	int fact=1;
+	public void disp()
+	{
+		while(i<=n)
+		{
+			fact=fact*i;
+			i++;
+		}
+		System.out.println("This is factorial of given no = "+fact);
+		
+	}
+	
+	public static void main(String args[])
+	{
+		factorial fact=new factorial();
+		fact.disp();
+	}
+
+}
+=================================================================================
+=================================================================================
+Q3.Wap input a no and check it is armstrong no or not.
+---------------------------------------------------------------------------------
+
+package oops;
+
+public class armstrong 
+{
+	int n=123;
+	 int i=n;
+	 int sum=0;
+	 int rm=0;
+	 public void disp()
+	 {
+		 while(i!=0)
+		 {
+			 rm=i%10;
+			 sum=sum+(rm*rm*rm);
+			 i=i/10;
+		 }
+		 if(n==sum)
+			 System.out.println("this is armstrong no");
+		 else
+			 System.out.println("this is not armstrong no");
+		 
+	 }
+  public static void main(String args[])
+  {
+	  armstrong arm=new armstrong();
+	  arm.disp();
+  }
+
+}
+=================================================================================
+=================================================================================
+Q4.Wap find the fabnoscii .
+
+
+package oops;
+
+public class fibnossis
+{
+    int n=8;
+    int n1=0;
+    int n2=1;
+    int n3=0;
+
+    public void input()
+    {
+        System.out.println("this is fibnossis series of given no");
+    	System.out.println(n1);
+    	System.out.println(n2);
+    }
+    public void disp()
+    {
+    	int i=1;
+    	while(i<=n)
+    	{
+    		n3=n1+n2;
+    		System.out.println(n3);
+    		n1=n2;
+    		n2=n3;
+    		i++;
+    	}
+    }
+    
+    public static void main(String args[])
+    {
+    	fibnossis fib=new fibnossis();
+    	fib.input();
+    	fib.disp();
+    }
+}
+===============================================================================
+==============================================================================
+5.Wap intput a no and check it is prime no or not.
+
+package oops;
+import java.util.*;
+public class prime_no 
+{
+   int i=2;
+   Scanner sc=new Scanner(System.in);
+   public void input()
+   {
+	 System.out.println("ENTER THE NO CHECK PRIME OR NOT");
+     int n=sc.nextInt(); 
+
+        while(i<=n)
+    	 {
+    		 if(n%i==0)
+    			 break;
+    		    i++;
+    	 }
+    
+      if(n==i)
+    System.out.println("THIS IS PRIME NO");
+      else
+    System.out.println("THIS IS NOT PRIME NO");
+      
+   }
+   public static void main(String args[])
+   {
+	   prime_no pn=new prime_no();
+	   pn.input();
+	   pn.input();
+   }
+    	
+ }
+========================================================================
+========================================================================
+6.Wap input 5 digit integer value and print its reverse.
+package oops;
+
+public class reverse 
+{
+	int n=1234;
+	int rev=0;
+	int rm=0;
+	int i;
+	public void disp()
+	{
+		for(i=n;i!=0;i++)
+		{
+			rm=i%10;
+			rev=rev*10+rm;
+			i=i/10;
+			
+		}
+		System.out.println(rev);
+	}
+	public static void main(String args[])
+	{
+		reverse revs=new reverse();
+		revs.disp();
+	}
+
+}
+===================================================================
+===================================================================
+Q7.Wap input 5 digit integer and find the sum of even and odd no .
+package oops;
+import java.util.*;
+public class sum_even_odd
+{
+	Scanner sc=new Scanner(System.in);
+	int sumeven=0;
+	int sumodd=0;
+     
+	public void disp()
+	{
+		for(int i=1;i<=5;i++)
+		    {
+	          int n=sc.nextInt();
+		      
+
+			   if(n%2!=0)
+			{
+				
+				sumodd=sumodd+n;
+			}
+			   if(n%2==0)
+				
+			{
+	           sumeven=sumeven+n;
+			}
+			  
+		 }
+		System.out.println("sum of odd no = "+sumodd);
+        System.out.println("sum of even no = "+sumeven);
+	 }
+	
+	
+	 public static void main(String args[])
+	 {
+		 sum_even_odd eo=new sum_even_odd();
+		  eo.disp();
+	 }
+	
+}
+=========================================================================
+=========================================================================
+Q8.Wap print all prime no between 1 to n;
+package oops;
+import java.util.*;
+public class prime2
+{
+Scanner sc=new Scanner(System.in);
+int i;
+int n=sc.nextInt();
+public void disp()
+{
+   
+	for(i=1;i<=n;i++)
+	{
+	  boolean x=true;
+	  for(int j=2;j<i;j++)
+	  {
+		if(i%j==0)
+		{
+			x=false;
+			break;
+		}
+	  }   
+	
+	 if(x)
+		System.out.println(i);
+	}
+}
+ public static void main(String args[])
+ {
+	 prime2 p=new prime2();
+	 p.disp();
+ }
+}
+========================================================================
+
+
+
+
+Q9.Wap print all palindrome no between 1 to n.
+================================================================
+package oops;
+import java.util.*;
+public class palindrom3 {
+	Scanner sc = new Scanner(System.in);
+    
+   int  range1 = sc.nextInt();
+   int range2 = sc.nextInt();
+    int num1 = 0;
+    int num2 = 0;
+    public void disp()
+    {
+    for (int i = range1; i <= range2; i++) 
+    {
+        num1 = i;
+        num2 = 0;
+        while (num1 != 0)
+        {
+            int rem = num1 % 10;
+            num1 /= 10;
+            num2 = num2 * 10 + rem;
+        }
+
+        if (i == num2)
+            System.out.println(i + " ");
+    }
+    }
+    public static void main(String args[])
+    {
+    	palindrom3 p=new palindrom3();
+    	p.disp();
+    }
+
+}
